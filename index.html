@@ -17,6 +17,7 @@
         });
         OneSignal.push(function () {
             OneSignal.on('notificationDisplay', function (event) {
+                console.log('new noti', event);
                 newNoti += 1;
                 $('#show-noti').attr("data-noti", newNoti);
             });
