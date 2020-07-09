@@ -13,6 +13,10 @@
             OneSignal.init({
                 appId: "cc802858-d7b9-42f5-a1f3-c63e38b12333",
             });
+            OneSignal.on('notificationDisplay', function (event) {
+                newNoti += 1;
+                $('#show-noti').attr("data-noti", newNoti);
+            });
         });
         // setTimeout(() => {
         // OneSignal.push(function () {
